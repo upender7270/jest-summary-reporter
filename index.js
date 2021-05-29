@@ -64,18 +64,18 @@ class SummaryReporter {
     return this._failuresOnly ? 'Summary of failed tests' : 'Summary of tests';
   }
 
-  printPath(ancestorTitles) {
-    let p = this._path, a = ancestorTitles;
-    while (p.length > 0 && a.length > 0 && p[p.length-1] != a[a.length-1]) {
-      p.pop();
-    }
-    this._indent = INDENT.repeat(p.length+1);
-    for (let i = p.length; i < a.length; i++) {
-      this.log(this._indent + pathStyle(a[i]));
-      p.push(a[i]);
-      this._indent += INDENT;
-    }
-  }
+//   printPath(ancestorTitles) {
+//     let p = this._path, a = ancestorTitles;
+//     while (p.length > 0 && a.length > 0 && p[p.length-1] != a[a.length-1]) {
+//       p.pop();
+//     }
+//     this._indent = INDENT.repeat(p.length+1);
+//     for (let i = p.length; i < a.length; i++) {
+//       this.log(this._indent + pathStyle(a[i]));
+//       p.push(a[i]);
+//       this._indent += INDENT;
+//     }
+//   }
 
   resetPath() {
     this._path = [];
